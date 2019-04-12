@@ -16,7 +16,7 @@ defaults:
     values:
       layout: post
       permalink: /blog/:year/:month/:day/:title/
-title: Ray
+title: Ray Matsumoto
 description: Ray's portfolio (WIP)
 url: https://raymatsumoto.com
 author: Ray Matsumoto
