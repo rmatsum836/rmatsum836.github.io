@@ -35,10 +35,17 @@
 
   </head>
 
-  <body>
-    <div id="wrap">
-      <nav class="navbar navbar-default" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
+  <body class="{{ page.section }}">
+    <div id="container">
+        <div class="wrap">
+        <div id="header">
+            <div id="branding">
+                <h1 id="site-title">
+                    <a href="/" title="Ray Matsumoto"
+                                rel="Home">Ray Matsumoto</a>
+            </div>
+        <!--<nav class="navbar navbar-default" role="navigation">
+         Brand and toggle get grouped for better mobile display
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -47,7 +54,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-        </div>
+        </div>-->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="jb-navbar-collapse">
