@@ -10686,21 +10686,6 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: none;
 }
 
-.entry-summary {
-    float: right;
-    width: 45%;
-    border-left: 1px solid #e5e5e5;
-    padding-left: 2.3475%;
-}
-
-.hentry {
-  float: left;
-  width: 100%;
-  margin: 0 0 20px 0;
-  padding: 0 0 5px 0;
-  font-size: 1em;
-  border-bottom: 1px solid #e5e5e5;
-
 #footer-links {
     text-align: center;
     font-size: 14px;
