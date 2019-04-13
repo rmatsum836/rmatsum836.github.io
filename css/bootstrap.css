@@ -10685,12 +10685,12 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: none;
 }
 
-.footer-links {
+#footer-links {
     text-align: center;
     font-size: 14px;
     padding 0 0 10px;
 }
 
-.footer {
+#footer {
     text-align: center;
 }
