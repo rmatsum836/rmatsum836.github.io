@@ -10712,3 +10712,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .entry-summary p { margin: 0 0 1em 0; }
+
+.hfeed h1, .hfeed h2, .hfeed h3, .hfeed h4, .hfeed h5, .hfeed h6 { font-weight: normal; }
+.hcat h5 {
+    font-weight: normal;
+    margin-top: 20px;
+}
