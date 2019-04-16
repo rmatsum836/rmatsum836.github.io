@@ -10703,3 +10703,12 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 14px;
     padding 0 0 10px;
 }
+
+.entry-summary {
+    float: right;
+    width; 65%;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 2.34375%;
+}
+
+.entry-summary p { margin: 0 0 1em 0; }
