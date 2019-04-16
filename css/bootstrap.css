@@ -10689,6 +10689,7 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: visible;
   margin: 0 auto 0 auto;
   padding: 15px 10px;
+  font-size: 0.8rem;
   clear: both;
   text-align: center;
 }
