@@ -10824,5 +10824,6 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 .home {
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 200px;
     margin: 10px;
 }
