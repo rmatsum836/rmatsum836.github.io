@@ -6,7 +6,7 @@ layout: default
 <div
 style="max-width:800px;margin-left:auto;margin-right:auto;">
 
-  <img src="/images/website-image.png" alt="Ray Matsumoto" class="float: left" width="200" height="200" />
+  <div style="text-align: left"><img src="/images/website-image.png" alt="Ray Matsumoto" width="200" height="200" /></div>
 
    <p>My name is Ray Matsumoto, I am currently a Ph.D. candidate in
    chemical engineering at Vanderbilt University.  I work in the
