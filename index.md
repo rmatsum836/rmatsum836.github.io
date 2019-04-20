@@ -4,7 +4,7 @@ layout: default
 ---
 
 <div
-style="max-width:800px;margin-left:auto;margin-right:auto;display:inline;">
+style="max-width:800px;margin-left:auto;margin-right:auto;">
 
   <div style="text-align: left"><img src="/images/website-image.png" alt="Ray Matsumoto" width="200" height="200" /></div>
 
