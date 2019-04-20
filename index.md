@@ -4,8 +4,7 @@ layout: default
 ---
 
 <div class="home">
- <hr />
- <div "padding-left: 60px; padding-right: 60px;  margin: 25px">
+
   <img src="/images/website-image.png" alt="Ray Matsumoto" class="float: left" width="200" height="200" />
 
    <div class="entry-summary">
@@ -17,6 +16,5 @@ layout: default
       develop predictive models of electrolyte transport for
       energy-storage devices.</p>
 
-  </div>
  </div>
 </div>
