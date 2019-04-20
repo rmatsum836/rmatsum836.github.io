@@ -3,7 +3,7 @@ section: home
 layout: default
 ---
 
-<div class="home">
+<div style="padding-left:20px;padding-right:20px;max-width:400px;margin:10px;">
 
   <img src="/images/website-image.png" alt="Ray Matsumoto" class="float: left" width="200" height="200" />
 
