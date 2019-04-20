@@ -3,10 +3,10 @@ section: home
 layout: default
 ---
 
-<div class="hfeed">
+<div class="home">
  <hr />
- <div class="hentry post no-border">
-  <img src="/images/website-image.png" alt="Ray Matsumoto" class="archive-thumbnail home-thumbnail" width="180" height="180" />
+ <div style="padding: 0 0 0 0; margin: 0 0 0 0">
+  <img src="/images/website-image.png" alt="Ray Matsumoto" class="float: left" width="180" height="180" />
 
    <div class="entry-summary">
 
