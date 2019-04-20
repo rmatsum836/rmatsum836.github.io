@@ -10822,7 +10822,7 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 }
 
 .home {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 10px;
 }
