@@ -8,6 +8,7 @@ description: ""
 style="max-width:1000px;margin-left:auto;margin-right:auto;">
 
    <!-- Vanderbilt -->
+   <div
    style="font-weight:bolder;">
    <h4>Vanderbilt</h4>
    </div>
