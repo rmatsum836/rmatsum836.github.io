@@ -5,11 +5,11 @@ description: ""
 ---
 
 <div
-style="max-width:800px;margin-left:auto;margin-right:auto;">
+style="max-width:1000px;margin-left:auto;margin-right:auto;">
 
    <!-- Vanderbilt -->
-   <div class="hentry post project-batch-title">
-   <h2>Vanderbilt</h2>
+   style="font-weight:bolder;">
+   <h4>Vanderbilt</h4>
    </div>
 
    <!-- AIChE Annual Conference, Pittsburgh 2018 -->
