@@ -10898,7 +10898,7 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 
 /* Post excerpts
 -------------------------------------------------------------- */
-.entry-summary p { margin: 0 0 1em 0; }
+.entry-summary p { margin-left: auto; margin-right:auto; }
 
 .entry-summary p a {
   text-decoration: none;
@@ -10910,3 +10910,34 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 }
 
 /* Post metadata
+/* WordPress classes
+-------------------------------------------------------------- */
+.hfeed h1, .hfeed h2, .hfeed h3, .hfeed h4, .hfeed h5, .hfeed h6 { font-weight: normal; }
+.hcat h5 {
+  font-weight: normal;
+  margin-top: 25px;
+}
+.left, .alignleft {
+  float: left;
+  margin: 0 15px 5px 0;
+}
+.right, .alignright {
+  float: right;
+  margin: 0 0 10px 25px;
+}
+.center, .aligncenter {
+  display: block;
+  margin: 0 auto 1.692307em auto !important;
+}
+.block, .alignnone {
+  display: block;
+  margin: 0 0 1.692307em 0;
+}
+img.alignleft, img.alignright {
+  margin-top: 5px;
+  display: inline;
+}
+blockquote.alignleft, blockquote .alignright { width: 33%; }
+.byline abbr, .entry-meta abbr, .comment-meta abbr { border: none; }
+.clear { clear: both; }
+.no-border { border: 0 };

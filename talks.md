@@ -1,6 +1,6 @@
 ---
 layout: default
-title: talks
+title: Talks
 description: ""
 ---
 
