@@ -10812,7 +10812,8 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 .hentry {
   float: left;
   width: 100%;
-  margin: 0 0 20px 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 0 5px 0;
   font-size: 1em;
   border-bottom: 1px solid #e5e5e5;
