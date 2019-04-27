@@ -10815,7 +10815,7 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   margin-left: auto;
   margin-right: auto;
   padding: 0 0 5px 0;
-  font-size: 1em;
+  font-size: 0.8em;
   border-bottom: 1px solid #e5e5e5;
 }
 .hentry:last-child {
@@ -10944,7 +10944,7 @@ blockquote.alignleft, blockquote .alignright { width: 33%; }
 
 /* Projects */
 .project-batch-title h2 {
-  margin: 0 0 5px 0;
+  margin: 0 0 5x 0;
   margin-top: 0.58333333em;
 }
 
