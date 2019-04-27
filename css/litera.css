@@ -10855,7 +10855,7 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 .hentry .entry-title {
   margin: 0 0 0.25em 0;
   padding: 0;
-  font-size: 22px;  /* 24 / 13 = 1.846153846153846 */
+  font-size: 18px;  /* 24 / 13 = 1.846153846153846 */
   text-transform: capitalize;
   line-height: 1.3em;
   border: none;
