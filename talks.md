@@ -5,13 +5,13 @@ description: ""
 ---
 
 <div
-style="max-width:800px;margin-left:auto;margin-right:auto;">
+style="max-width:1000px;margin-left:auto;margin-right:auto;">
 
    <!-- 2018 -->
    <!--<div class="hentry post project-batch-title">-->
    <div
-   style="font-size:1em !important;font-weight:bolder;">
-   <h2>2018</h2>
+   style="font-weight:bolder;">
+   <h4>2018</h4>
    </div>
 
    <!-- AIChE Annual Conference, Pittsburgh 2018 -->
