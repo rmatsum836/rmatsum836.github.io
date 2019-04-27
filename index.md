@@ -13,6 +13,6 @@ style="max-width:800px;margin-left:auto;margin-right:auto;">
    <a href="http://huggins.vuse.vanderbilt.edu/ptc/"
    onclick="trackOutboundLink('http://huggins.vuse.vanderbilt.edu/ptc/');">Cummings Group</a>, and I use molecular dynamics simulations to
    develop predictive models of electrolyte transport for
-   energy-storage devices.</p>
+   energy-storage devices.<br style="clear: both;" /></p>
 
 </div>
