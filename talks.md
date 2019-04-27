@@ -10,7 +10,7 @@ style="max-width:800px;margin-left:auto;margin-right:auto;">
    <!-- 2018 -->
    <!--<div class="hentry post project-batch-title">-->
    <div
-   style="font-size:14px;text-transform:captitalize;font-weight:bolder;">
+   style="font-size:12px;text-transform:captitalize;font-weight:bolder;">
    <h2>2018</h2>
    </div>
 
