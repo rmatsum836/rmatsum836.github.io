@@ -1,6 +1,6 @@
 ---
-layout: page
-title: "Talks"
+layout: default
+title: talks
 description: ""
 ---
 
