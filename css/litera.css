@@ -10800,25 +10800,112 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
     padding 0 0 10px;
 }
 
-.entry-summary {
-    float: right;
-    width; 50%;
-    font-size: 0.85em;
-    border-left: 1px solid #e5e5e5;
-    padding-left: 2.34375%;
-}
-
-.entry-summary p { margin: 0 0 1em 0; }
-
-.hfeed h1, .hfeed h2, .hfeed h3, .hfeed h4, .hfeed h5, .hfeed h6 { font-weight: normal; }
-.hcat h5 {
-    font-weight: normal;
-    margin-top: 20px;
-}
-
 .home {
     padding-left: 20px;
     padding-right: 20px;
     max-width: 400px !important;
     margin: 10px;
 }
+
+/* Posts
+-------------------------------------------------------------- */
+.hentry {
+  float: left;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0 0 5px 0;
+  font-size: 1em;
+  border-bottom: 1px solid #e5e5e5;
+}
+.hentry:last-child {
+  border-bottom: 0;
+}
+.singular .hentry {
+  margin: 0 0 30px 0;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.featured { margin-bottom: 20px; }
+.sticky .sticky-header {
+  float: left;
+  width: 30%;
+}
+.sticky .byline { clear: left }
+.sticky .entry-summary {
+  float: right;
+  width: 65%;
+  border-left: 1px solid #e5e5e5;
+  padding-left: 2.34375%;
+}
+.hentry .featured-thumbnail { margin-bottom: 25px; }
+.hentry .archive-thumbnail {
+  float: left;
+  width: 180px;
+  height: 180px;
+  margin: 3px 25px 20px 0;
+}
+.hentry .home-thumbnail {
+  border: none;
+}
+
+/* Post titles
+-------------------------------------------------------------- */
+.hentry .entry-title {
+  margin: 0 0 0.25em 0;
+  padding: 0;
+  font-size: 22px;  /* 24 / 13 = 1.846153846153846 */
+  text-transform: capitalize;
+  line-height: 1.3em;
+  border: none;
+  color: #333;
+  word-spacing: 2px;
+}
+.singular .entry-title {
+  font-size: 24px;  /* 24 / 13 = 1.846153846153846 */
+  margin-bottom: 0.625em;
+}
+.singular-page .entry-title { color: #ccc; }
+.singular-page .entry-title, .singular-attachment .entry-title { margin-bottom: 1.2em; }
+.entry-title a, .entry-title a:visited { color: #222; }
+.entry-title a:hover { color: #4e2a5e; }
+
+/* Post bylines/datelines
+-------------------------------------------------------------- */
+.byline {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin: 0 0 1em 0;
+  font-size: 0.8461538461538462em;
+  color: #aaa;
+  line-height: 1.692307em;
+  word-spacing: 2px;
+}
+.singular .byline { margin-bottom: 1.7em; }
+.byline a, .byline a:visited { color: #aaa; }
+.byline a:hover { color: #000; }
+.author, .published, .category, .edit {
+  font-family: 'Bitter', Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+}
+.comment-list .published, .comment-list .edit, .comment-list .comment-reply-link {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  font-style: italic;
+  text-transform: none;
+}
+
+/* Post excerpts
+-------------------------------------------------------------- */
+.entry-summary p { margin: 0 0 1em 0; }
+
+.entry-summary p a {
+  text-decoration: none;
+  color: #381ebc;
+}
+
+.talk-title {
+  font-weight: 600;
+}
+
+/* Post metadata
