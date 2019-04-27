@@ -4,7 +4,8 @@ title: Talks
 description: ""
 ---
 
-<div class="hfeed">
+<div
+style="max-width:800px;margin-left:auto;margin-right:auto;">
 
    <!-- 2018 -->
    <div class="hentry post project-batch-title">
