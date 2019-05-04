@@ -4,7 +4,7 @@ layout: default
 ---
 
 <div
-style="max-width:800px;margin-left:auto;margin-right:auto;padding-top:40px">
+style="max-width:800px;margin-left:auto;margin-right:auto;padding-top:40px;padding-bottom:20px">
 
   <img style="float: left; margin: 0px 15px 15px 0px;" src="/images/website-image.png" width="150" height="150" />
 
