@@ -13,6 +13,11 @@ style="max-width:800px;margin-left:auto;margin-right:auto;padding-top:40px;paddi
    <a href="http://huggins.vuse.vanderbilt.edu/ptc/"
    onclick="trackOutboundLink('http://huggins.vuse.vanderbilt.edu/ptc/');">Cummings Group</a>, and I use molecular dynamics simulations to
    develop predictive models of electrolyte transport for
-   energy-storage devices.<br style="clear: both;" /></p>
+   energy-storage devices.</p>
+
+   <p>I will use this website to share talks I've given and projects I've worked on
+   throughout my PhD studies, as well as projects I've worked on in my free time.  I
+   will also ocasionally write blog posts, mostly to document various things for
+   myself. <br style="clear: both;" /></p>
 
 </div>
