@@ -22,4 +22,11 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
     simulation. </p>
     </div>
 
+   <div class="entry-summary">
+    <p>
+    phase-separation:  A collection of classes and functions to detect
+    phase-separation in solutions through image processing and
+    connected components analysis. Github repo will become public soon. </p>
+    </div>
+
 </div>
