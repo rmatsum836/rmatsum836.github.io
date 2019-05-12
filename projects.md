@@ -5,7 +5,7 @@ description: ""
 ---
 
 <div
-style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padding-bottom:20px">
+style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padding-bottom:20px;padding-left:15px;padding-right:15px">
 
    <!-- Vanderbilt -->
    <div
