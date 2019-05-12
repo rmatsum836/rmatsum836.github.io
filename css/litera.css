@@ -10821,3 +10821,14 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   font-weight: 600;
 }
 
+/* Buttons */
+.btn-icon {
+  display: inline-block;
+  color: #fff;
+  padding: 2px 14px;
+  transition-duration: 0.3s;
+}
+
+.btn-icon:hover {
+  color: #808080;
+}
