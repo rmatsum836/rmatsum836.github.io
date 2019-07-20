@@ -10,7 +10,7 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    <!-- Vanderbilt -->
    <div
    style="font-weight:bolder;">
-   <h4>Vanderbilt</h4>
+   <h4>Projects I have led development of</h4>
    </div>
 
    <!-- AIChE Annual Conference, Pittsburgh 2018 -->
@@ -23,10 +23,46 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
     </div>
 
    <div class="entry-summary">
-    <p>
-    phase-separation:  A collection of classes and functions to detect
+    <p><a class="talk-title"
+    href="https://github.com/rmatsum836/phase-separation"
+    target="_blank">phase-separation
+    </a>: A python package to detect
     phase-separation in solutions through image processing and
-    connected components analysis. Github repo will become public soon. </p>
+    connected components analysis. </p>
     </div>
+
+    <div class="entry-summary">
+    <p><a class="talk-title"
+    href="https://github.com/mattwthompson/pairing"
+    target="_blank">pairing
+    </a>: An analysis tool that finds and analyzes molecular pairs and clusters
+    over the course of a simulation trajectory. </p>
+    </div>
+
+   <div
+   style="font-weight:bolder;">
+   <h4>Projects I have contributed to</h4>
+   </div>
+
+    <p><a class="talk-title"
+    href="https://github.com/mosdef-hub/mbuild"
+    target="_blank">mBuild
+    </a>: A flexible, hierarchical molecule builder written in Python. </p>
+    </div>
+
+    <p><a class="talk-title"
+    href="https://github.com/mosdef-hub/mbuild"
+    target="_blank">foyer
+    </a>: A package for atom-typing force fields, parametrizing molecular
+    simulations, and disseminating force fields. </p>
+    </div>
+
+    <p><a class="talk-title"
+    href="https://github.com/mdtraj/mdtraj"
+    target="_blank">MDTraj
+    </a>: A powerful Python library for analyzing trajectories, particularly
+    analyses that rely on distance calculating. </p>
+    </div>
+
 
 </div>
