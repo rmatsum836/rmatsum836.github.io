@@ -44,12 +44,14 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    <h4>Projects I have contributed to</h4>
    </div>
 
+   <div class="entry-summary">
     <p><a class="talk-title"
     href="https://github.com/mosdef-hub/mbuild"
     target="_blank">mBuild
     </a>: A flexible, hierarchical molecule builder written in Python. </p>
     </div>
 
+   <div class="entry-summary">
     <p><a class="talk-title"
     href="https://github.com/mosdef-hub/mbuild"
     target="_blank">foyer
@@ -57,6 +59,7 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
     simulations, and disseminating force fields. </p>
     </div>
 
+   <div class="entry-summary">
     <p><a class="talk-title"
     href="https://github.com/mdtraj/mdtraj"
     target="_blank">MDTraj
