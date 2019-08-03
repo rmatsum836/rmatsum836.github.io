@@ -23,9 +23,12 @@ power density however means that an electric vehicle requires longer
 time to charge.  Supercapacitors on the other hand, exhibit high power
 density and low energy density.  This makes supercapacitors more
 suitable for applications such as regenerative braking, where energy
-needs to be delivered at higher rates.  Overall, the ultimate goal is
+needs to be delivered at higher rates.  This can be viewed in the
+Ragone plot below (courtesy of Matt Thompson).  Overall, the ultimate goal is
 to develop energy-storage devices that have both high energy and power
 density.
+
+![Ragone](/images/blog/aug19/ragone.png)
 
 In the FIRST Center, we have approached this problem from the side of
 supercapacitors.  I won't go into too much detail here, but
@@ -37,7 +40,9 @@ and conductivity can enhance the power density of a supercapacitor.
 Now to pivot slightly to energy density.  Energy density is governed
 by the following equation:
 
-    E = 1/2CV^2
+$$
+    E = \frac{1}{2}CV^2
+$$
 
 where E is energy density, C is capacitance and V is the voltage.  As
 you can see, if we operate these devices at higher voltages, we can
