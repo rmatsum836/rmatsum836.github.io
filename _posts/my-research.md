@@ -1,0 +1,76 @@
+---
+layout: post
+title: An overview of my research
+excerpt: A brief introduction to molecular dynamics simulations, and supercapacitor research
+redirect_from: my-research.md
+---
+
+Hi everyone, this is my first blog post where I will give a higher
+level overview of my PhD research.  Several of my side projects stem
+from curiousities based off my research, so I think it makes sense to
+have this post as a point of reference.
+
+### Energy Storage Devices
+
+In the Fluid Interface Reactions, Structure, and Transport (FIRST)
+Center, we are focused on understanding the transport of ions for
+energy-storage applications.  Currently, energy storage devices are
+all limited in some for or another.  Batteries for example, exhibit
+high energy density but low power density.  If you think about
+batteries in the sense of electric vehicles, high energy density
+allows for them to travel longer distances in between charges.  Lower
+power density however means that an electric vehicle requires longer
+time to charge.  Supercapacitors on the other hand, exhibit high power
+density and low energy density.  This makes supercapacitors more
+suitable for applications such as regenerative braking, where energy
+needs to be delivered at higher rates.  Overall, the ultimate goal is
+to develop energy-storage devices that have both high energy and power
+density.
+
+In the FIRST Center, we have approached this problem from the side of
+supercapacitors.  I won't go into too much detail here, but
+supercapacitors store energy through the adsorption of ions on
+surfaces of electrodes.  Unlike batteries, there are no chemical
+reactions so transport is the rate-limiting process in supercapacitor
+energy storage.  In other words, electrolytes with faster diffusion
+and conductivity can enhance the power density of a supercapacitor.
+Now to pivot slightly to energy density.  Energy density is governed
+by the following equation:
+
+    E = 1/2CV^2
+
+where E is energy density, C is capacitance and V is the voltage.  As
+you can see, if we operate these devices at higher voltages, we can
+quadratically improve the energy density.  This is where ionic liquids
+come into play.
+
+### Ionic Liquids
+Ionic liquids are salts that are liquid at ambient conditions.  The
+reason ionic liquids are attractive electrolytes for energy storage is
+that they have high operational voltage windows.  Going back to the
+quadratic increase in energy density, the ability for ionic liquids to
+withstand higher voltages means we can achieve this quadratic
+increase.  The major downside of ionic liquids is that they exhibit
+slow transport properties, which can decrease the power density
+performance.  To solve this problem, ionic liquids can be solvated
+with organic solvents to improve ion transport.
+
+### Molecular Dynamics
+To study ionic liquids, I use molecular dynamics (MD) simulations.  I
+will only provide a higher level overview, but MD simulations
+integrate over Newton's equations of motion over time to track the
+forces and positions of molecules.  When studying electrolytes, we
+primarily use MD simulations to study the structure and transport.
+During my three years as a graduate student, I've spent the majority
+of my time screening over 400 solvated ionic liquids with various
+solvents and concentrations.  If you're interested, you can read more
+about this study here.  We are continuing to study these solutions,
+and have additional papers in preparation.
+
+### Conclusions
+This was a very brief overview of what I've been working on for the
+last three years, but hopefully it's enough to understand the
+motivation for several side projects I've been working on.  In
+addition to ionic liquids, we are also beginning to use MD simulations
+to study MXenes, which are novel 2D titanium carbides/nitrides.  If
+you have any questions, feel free to reach out to me.
