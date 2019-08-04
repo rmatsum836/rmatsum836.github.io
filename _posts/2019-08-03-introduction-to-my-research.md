@@ -1,9 +1,11 @@
 ---
 layout: post
-title: An overview of my research
-excerpt: A brief introduction to molecular dynamics simulations, and supercapacitor research
-redirect_from: my-research.md
+title: "Introduction to My Research"
+description: ""
+category: 
+tags: []
 ---
+{% include JB/setup %}
 
 Hi everyone, this is my first blog post where I will give a higher
 level overview of my PhD research.  Several of my side projects stem
