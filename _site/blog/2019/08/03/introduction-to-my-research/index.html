@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Introduction to My Research</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:4000/blog/2019/08/03/introduction-to-my-research/" />
+    <meta property="og:title" content="Introduction to My Research" />
+    <meta property="og:description" content="<p>Hi everyone, this is my first blog post where I will give a higher
+level overview of my PhD research.  Several of my side projects stem
+from curiousities based off my research, so I think it makes sense to
+have this post as a point of reference.</p>
+
+" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap styles -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  </head>
+
+  <body> <!--class="">-->
+   <header class="navbar-inverse">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container">
+      <a class="navbar-brand" href="/index">Ray Matsumoto</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/talks">Presentations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://github.com/rmatsum836/">Github</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
+
+      <!--<div id="branding">
+        <h1 id="site-title">
+         <a href="/" title="Ray Matsumoto" rel="Home">Ray Matsumoto</a>
+        </h1>
+      </div>
+         
+      <div id="menu-primary" class="menu-container">
+       <div class="menu">
+        <ul id="menu-primary-items">
+         <li class="menu-item home"><a class="spec" href="/">Home</a></li>
+         <li class="menu-item projects"><a class="spec" href="/projects">Projects</a></li>
+         <li class="menu-item github"><a class="spec" href="https://github.com/rmatsum836" target="_blank">Github</a></li>
+                     </a>
+                    </div>
+                   </li>
+                  </ul>
+                 </div>
+     </div>
+
+
+    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x
+        not supported in IE8) -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script src="/bootstrap/js/bootstrap.min.js"></script>-->
+  </body>
+</html>
+
+      <div class="clear"></div>
+    </div>
+
+
+<div id="content"
+style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padding-bottom:20px;padding-left:15px;padding-right:15px">
+  <div class="hfeed">
+    <div class="hentry post">
+      <div class="post-content">
+        <div class="sticky-header">
+          <h1>Introduction to My Research</h1>
+          
+          <div class="byline">August 03, 2019 . <a href="/blog/categories.html#Energy" class="category">Energy</a>, <a href="/blog/categories.html#Molecular Simulation" class="category">Molecular Simulation</a></div>
+        </div>
+
+        <div id="toc" class="toc"></div>
+
+        <div class="entry-content">
+          <p>Hi everyone, this is my first blog post where I will give a higher
+level overview of my PhD research.  Several of my side projects stem
+from curiousities based off my research, so I think it makes sense to
+have this post as a point of reference.</p>
+
+<h3 id="energy-storage-devices">Energy Storage Devices</h3>
+
+<p>In the Fluid Interface Reactions, Structure, and Transport (FIRST)
+Center, we are focused on understanding the transport of ions for
+energy-storage applications.  Currently, energy storage devices are
+all limited in some for or another.  Batteries for example, exhibit
+high energy density but low power density.  If you think about
+batteries in the sense of electric vehicles, high energy density
+allows for them to travel longer distances in between charges.  Lower
+power density however means that an electric vehicle requires longer
+time to charge.  Supercapacitors on the other hand, exhibit high power
+density and low energy density.  This makes supercapacitors more
+suitable for applications such as regenerative braking, where energy
+needs to be delivered at higher rates.  This can be viewed in the
+Ragone plot below (courtesy of Matt Thompson).  Overall, the ultimate goal is
+to develop energy-storage devices that have both high energy and power
+density.</p>
+
+<p><img src="/images/blog/aug19/ragone.png" alt="Ragone" /></p>
+
+<p>In the FIRST Center, we have approached this problem from the side of
+supercapacitors.  I won’t go into too much detail here, but
+supercapacitors store energy through the adsorption of ions on
+surfaces of electrodes.  Unlike batteries, there are no chemical
+reactions so transport is the rate-limiting process in supercapacitor
+energy storage.  In other words, electrolytes with faster diffusion
+and conductivity can enhance the power density of a supercapacitor.
+Now to pivot slightly to energy density.  Energy density is governed
+by the following equation:</p>
+
+<script type="math/tex; mode=display">E = \frac{1}{2}CV^2</script>
+
+<p>where E is energy density, C is capacitance and V is the voltage.  As
+you can see, if we operate these devices at higher voltages, we can
+quadratically improve the energy density.  This is where ionic liquids
+come into play.</p>
+
+<h3 id="ionic-liquids">Ionic Liquids</h3>
+<p>Ionic liquids are salts that are liquid at ambient conditions.  The
+reason ionic liquids are attractive electrolytes for energy storage is
+that they have high operational voltage windows.  Going back to the
+quadratic increase in energy density, the ability for ionic liquids to
+withstand higher voltages means we can achieve this quadratic
+increase.  The major downside of ionic liquids is that they exhibit
+slow transport properties, which can decrease the power density
+performance.  To solve this problem, ionic liquids can be solvated
+with organic solvents to improve ion transport.</p>
+
+<h3 id="molecular-dynamics">Molecular Dynamics</h3>
+<p>To study ionic liquids, I use molecular dynamics (MD) simulations.  I
+will only provide a higher level overview, but MD simulations
+integrate over Newton’s equations of motion over time to track the
+forces and positions of molecules.  When studying electrolytes, we
+primarily use MD simulations to study the structure and transport.
+During my three years as a graduate student, I’ve spent the majority
+of my time screening over 400 solvated ionic liquids with various
+solvents and concentrations.  If you’re interested, you can read more
+about this study here.  We are continuing to study these solutions,
+and have additional papers in preparation.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+<p>This was a very brief overview of what I’ve been working on for the
+last three years, but hopefully it’s enough to understand the
+motivation for several side projects I’ve been working on.  In
+addition to ionic liquids, we are also beginning to use MD simulations
+to study MXenes, which are novel 2D titanium carbides/nitrides.  If
+you have any questions, feel free to reach out to me.</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div><!-- #content -->
+
+    <div id="main">
+
+    <div class="clear"></div>
+
+    <div style="text-align:center;font-size:18px;padding:0 0 10px;">
+      <p class="links">
+     <a href="https://www.linkedin.com/in/ray-matsumoto-251a8554/"
+        class="btn-icon" target="_blank">
+         <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+       </a>
+     <a href="https://github.com/rmatsum836"
+        class="btn-icon" target="_blank">
+         <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+       </a>
+     <a href="mailto:ray.a.matsumoto@vanderbilt.edu" class="btn-icon">
+         <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+       </a>
+      </p>
+     </div>
+         <!--<a href="https://www.linkedin.com/in/ray-matsumoto-251a8554/" alt="LinkedIn"
+                                                                   onclick="trackOutboundLink('https://www.linkedin.com/in/ray-matsumoto-251a8554?loc=bottom');">LinkedIn</a>
+     |
+     <a href=http://github.com/rmatsum836/" alt="Github" target="_blank" onclick="trackOutboundLink('http://github.com/?loc=bottom');">Github</a>
+     |
+     <a href="mailto:ray.a.matsumoto@vanderbilt.edu" alt="email" target="_blank" onclick="trackOutboundLink('mailto:ray.a.matsumoto@vanderbilt.edu');">Email</a>
+    </div>-->
+
+    <div style="overflow:visible;margin:0 auto 0 auto;padding:15x 10px;clear:both;text-align:center;font-size:10px">
+      <div class="container">
+          <p>&copy; 2019  <a href="https://raymatsumoto.com/">Ray Matsumoto</a>
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+        </p>
+      </div>
+    </div>
+

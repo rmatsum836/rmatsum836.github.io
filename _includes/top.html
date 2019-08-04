@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url}}" />
+    {% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
+    {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt }}" />{% endif %}
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap styles -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  </head>
+
+  <body> <!--class="{{ page.section }}">-->
+   <header class="navbar-inverse">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container">
+      <a class="navbar-brand" href="/index">Ray Matsumoto</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/talks">Presentations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://github.com/rmatsum836/">Github</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
+
+      <!--<div id="branding">
+        <h1 id="site-title">
+         <a href="/" title="Ray Matsumoto" rel="Home">Ray Matsumoto</a>
+        </h1>
+      </div>
+         
+      <div id="menu-primary" class="menu-container">
+       <div class="menu">
+        <ul id="menu-primary-items">
+         <li class="menu-item home"><a class="spec" href="/">Home</a></li>
+         <li class="menu-item projects"><a class="spec" href="/projects">Projects</a></li>
+         <li class="menu-item github"><a class="spec" href="https://github.com/rmatsum836" target="_blank">Github</a></li>
+                     </a>
+                    </div>
+                   </li>
+                  </ul>
+                 </div>
+     </div>
+
+
+    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x
+        not supported in IE8) -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script src="{{ ASSET_PATH
+        }}/bootstrap/js/bootstrap.min.js"></script>-->
+  </body>
+</html>
+
+      <div class="clear"></div>
+    </div>

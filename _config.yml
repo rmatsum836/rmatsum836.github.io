@@ -1,0 +1,28 @@
+highlighter: rouge
+permalink: none
+kramdown:
+  input: GFM
+  hard_wrap: false
+repository: rmatsum836/rmatsum836.github.io
+plugins:
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
+google_analytics: 'UA-40495390-2'
+title: Sourabh
+description: Ray's portfolio.
+url: https://raymatsumoto.com
+author: Ray Matsumoto
+social:
+  name: Ray Matsumoto
+  links:
+    - https://www.linkedin.com/in/ray-matsumoto-251a8554/
+    - https://github.com/rmatsum836
