@@ -11,6 +11,14 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    style="font-weight:bolder;">
    <h4>Journal Publications</h4>
    </div>
+   <div class="entry-summary">
+    <p> Osti, N. C.; Matsumoto, R. A.; Thompson, M. W.;
+    Cummings P. T.; Tyagi, M.; Mamontov, E; <a class="talk-title"
+    href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.9b05119"
+    target="_blank">Microscopic Dynamics in an Ionic Liquid Augmented
+    with Organic Solvents"
+    </a> J. Phys. Chem. C. 2019.</p>
+    </div>
 
    <div class="entry-summary">
     <p> Thompson, M.W.; Matsumoto, R; Sacci, R. L.; Sanders, N. C.;
