@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Introduction
-excert: An introduction about myself and what to expect
+excerpt: An introduction about myself and what to expect
 ---
 
-<img style="float: left; margin: 0px 25px 20px 0px;" src="/images/blog/nov13/me.png" width="400" height="400" />
+
+  <img style="float: left; margin: 0px 25px 20px 0px;" src="/images/blog/nov13/me.png" width="400" height="400" />
+
+
 Hi everyone, my name is Ray Matsumoto and this is my first post where
 I want to say a little about myself and what I aim to do with this
 blog.  I come from an engineering background, graduating from Clemson
@@ -29,4 +32,3 @@ Other times I plan to write blog posts on mistakes
 I've made and lessons I've learned in molecular simulation, data
 science, and software design (Believe me, there are many to talk about).  I hope these posts not only serve as documentation for myself, but that you can learn a thing
 or two as well.  Thanks for reading.
-<!--![](/images/blog/nov13/me.png)-->
