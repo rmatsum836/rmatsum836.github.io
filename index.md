@@ -7,7 +7,7 @@ layout: default
 
   <!--<img style="float: right; margin: 0px 15px 15px 0px;" src="/images/website-image.png" width="160" height="160" />-->
 
-  <img style="float: right; margin: 0px 15px 15px 0px;" src="/images/ray.jpeg" width="160" height="160" />
+  <img style="float: right; margin: 0px 25px 20px 0px;" src="/images/ray.jpeg" width="160" height="160" />
 
    <p>Hello! My name is Ray Matsumoto and I am a 
    chemical engineering Ph.D. student at Vanderbilt
