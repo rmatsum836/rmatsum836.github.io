@@ -7,9 +7,16 @@ layout: default
 
   <!--<img style="float: right; margin: 0px 15px 15px 0px;" src="/images/website-image.png" width="160" height="160" />-->
 
-  <img style="float: right; margin: 0px 25px 20px 0px;" src="/images/ray.jpeg" width="160" height="160" />
+  <center><img src="/images/website-image.png" width="300" height="300" /></center>
 
-   <p>Hello! My name is Ray Matsumoto and I am a 
+  <!--<center><p style="font-size:22px">Molecular Simulation. Data Science. Python.</p></center>-->
+
+  <center><p style="font-size:18px">
+  Hello! My name is Ray Matsumoto and I'm a Ph.D. student at Vanderbilt University using molecular dynamics to study
+  supercapacitors.  This is a place to document my experiences and learnings in molecular simulation, data science, and Python
+  software development.
+  </p></center>
+   <!--<p>Hello! My name is Ray Matsumoto and I am a 
    chemical engineering Ph.D. student at Vanderbilt
    University working for  <a href="http://huggins.vuse.vanderbilt.edu/ptc/"
    onclick="trackOutboundLink('http://huggins.vuse.vanderbilt.edu/ptc/');">Peter Cummings</a>.  I use molecular dynamics simulations to
@@ -30,6 +37,6 @@ layout: default
 
    <p>In my free time, I enjoy golfing and watching all types of
    sports, especially Clemson 
-   football. <br style="clear: both;" /></p>
+   football. <br style="clear: both;" /></p>-->
 
 </div>
