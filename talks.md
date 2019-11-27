@@ -13,6 +13,15 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    style="font-weight:bolder;">
    <h4>Conference Presentations</h4>
    </div>
+  
+   <!-- AIChe Annual Conference, 2019 -->
+   <div class="entry-summary">
+    <p><a class="talk-title"
+    href="https://www.aiche.org/conferences/aiche-annual-meeting/2019/proceeding/paper/643d-investigation-ion-correlations-ionic-liquid-and-organic-solvent-mixtures-through-scalable"
+    target="_blank">AIChE Annual Conference, Orlando, FL, November
+    2019</a>: Presentation of results regarding structure and transport properties 
+    of ionic liquid and solvent mixtures.</p>
+    </div>
 
    <!-- AIChE Annual Conference, Pittsburgh 2018 -->
    <div class="entry-summary">
