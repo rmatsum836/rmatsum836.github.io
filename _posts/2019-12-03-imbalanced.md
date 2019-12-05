@@ -49,7 +49,7 @@ set(pitch_types)
 There are 10 pitch types in total.  Below are the descriptions for each pitch:
 
 - `CH`: changeup
-- `CU`:  curveball
+- `CU`: curveball
 - `EP`: ephus
 - `FC`: cutter
 - `FF`: four-seam
@@ -58,6 +58,10 @@ There are 10 pitch types in total.  Below are the descriptions for each pitch:
 - `KC`: knuckle-curve
 - `SI`: sinker
 - `SL`: slider
+- `KN`: knuckle
+- `FO`: forkball
+- `PO`: pitchout
+- `SC`: screwball
 
 We can get the count of each pitch type in our dataset with the following command:
 ```
@@ -156,21 +160,47 @@ from sklearn.ensemble import RandomForestClassifier
 rf = RandomForestClassifier(n_estimators=100,
                            oob_score=True,
                            random_state=0)
+rf.fit(X_train, y_train)
+
+rf_predictions = rf.predict(X_test)
 ```
 
 The results can be seen in the confusion matrix below.  We observe that the random forest model does
 a good job at predicting the pitch types that have many data points: changeups, curveballs,
-four-seam fastballs, and sliders.  As expected however, the model is not effective at predicting the
-minority pitch types.  Now let's use SMOTE in imbalanced-learn to see if we can improve the
-performance of our model through oversampling.
+four-seam fastballs, and sliders.  We can also take a look at the precision and recall for this model.  To do
+so, we will import `metrics` from scikit-learn.  As expected however, the model is not effective at predicting the
+minority pitch types. 
 
   <center><img style="margin: 0px 25px 20px 0px;" src="/images/blog/dec4/non_smote_confusion.png" width="800" height="800" /></center>
-  <center><em> A confusion matrix displaying the predicted pitch types (x-axis) versus the true
-  pitch types (y-axis)</em></center>
+  <center><em> A confusion matrix of the Random Forest Classifier results with imbalanced data </em></center><br/>
 
+```
+from sklearn import metrics
+print(metrics.classification_report(y_update, rf_update, target_names=sorted(set(y_update))))
 
+              precision    recall  f1-score   support
 
-To use SMOTE oversampling we use the `SMOTE()` function within imbalanced-learn:
+          CH       0.91      0.95      0.93     50090
+          CU       0.89      0.89      0.89     38776
+          FC       0.85      0.72      0.78     28095
+          FF       0.93      0.97      0.95    167880
+          FO       0.00      0.00      0.00        25
+          FS       0.88      0.62      0.73      6581
+          FT       0.78      0.77      0.78     44518
+          KC       0.90      0.72      0.80     11202
+          KN       0.00      0.00      0.00         3
+          PO       0.00      0.00      0.00        28
+          SC       0.00      0.00      0.00        14
+          SI       0.85      0.73      0.79     36646
+          SL       0.87      0.93      0.90     75256
+
+    accuracy                           0.89    459114
+   macro avg       0.60      0.56      0.58    459114
+weighted avg       0.89      0.89      0.89    459114
+```
+
+Now let's use SMOTE in imbalanced-learn to see if we can improve the performance of our model through
+oversampling.  To use SMOTE oversampling we use the `SMOTE()` function within imbalanced-learn:
 
 ```
 from imblearn.over_sampling import SMOTE
@@ -203,4 +233,50 @@ Counter({0: 311899,
 ```
 
 Nice! SMOTE generated synthetic data points so that now each pitch type is equal with each other.
-Now let's see if this improves the performance of the random forest classifier.
+Now let's see if this improves the performance of the random forest classifier.  Let's run the random forest classifier again, now
+with the resampled data from SMOTE.  The confusion matrix from the result are also shown down below.
+
+```
+# Run Random Forest Model
+rf = RandomForestClassifier(n_estimators=100,
+                           oob_score=True,
+                           random_state=0)
+
+rf.fit(X_resampled, y_resampled)
+
+rf_predictions = rf.predict(X_test)
+```
+
+  <center><img style="margin: 0px 25px 20px 0px;" src="/images/blog/dec4/smote_confusion.png" width="800" height="800" /></center>
+  <center><em> A confusion matrix of the Random Forest Classifier results with SMOTE</em></center><br/>
+
+From the confusion matrix, we see mixed results.  Pitches that already had a sufficient number of data points
+like cutters, knucklecurves, changeups, and four-seam fastballs are predicted with roughly the same accuracy.  However
+pitches like sliders, two-seam fastballs, curveballs, and sinkers are predicted with much better accuracy.
+There are still pitch types that aren't being predicted well at all, such as pitchouts and screwballs,
+which is likely due to the small amount of data for these pitch types to begin with.  In fact, I originally didn't come across pitchouts when analyzing a smaller size of data, so this might be an inconsistent pitch type.  
+Similar to what I did with the imbalanced data, I generated a list of precision, recall, and f1-scores.
+
+```
+print(metrics.classification_report(y_update, rf_update, target_names=sorted(set(y_update))))
+
+          precision    recall  f1-score   support
+
+          CH       0.93      0.93      0.93     50090
+          CU       0.90      0.91      0.90     38776
+          FC       0.77      0.83      0.80     28095
+          FF       0.96      0.93      0.95    167880
+          FO       0.31      0.16      0.21        25
+          FS       0.75      0.81      0.78      6581
+          FT       0.76      0.82      0.79     44518
+          KC       0.83      0.84      0.83     11202
+          KN       1.00      0.33      0.50         3
+          PO       0.16      0.21      0.18        28
+          SC       0.50      0.07      0.12        14
+          SI       0.82      0.80      0.81     36646
+          SL       0.91      0.89      0.90     75256
+
+    accuracy                           0.89    459114
+   macro avg       0.74      0.66      0.67    459114
+weighted avg       0.89      0.89      0.89    459114
+```
