@@ -5,8 +5,7 @@ category:
 - Data Science
 - Software
 excerpt: Oversampling to balance your dataset
----
-
+--- 
 When I tell someone I'm a PhD student in chemical engineering, most of the time they have the
 impression that I'm studying chemical plant processes and such in great detail.  As a result, they are
 usually surprised to hear that the majority of my day-to-day job consists of writing Python code.
@@ -165,6 +164,12 @@ four-seam fastballs, and sliders.  As expected however, the model is not effecti
 minority pitch types.  Now let's use SMOTE in imbalanced-learn to see if we can improve the
 performance of our model through oversampling.
 
+  <center><img style="margin: 0px 25px 20px 0px;" src="/images/blog/dec4/non_smote_confusion.png" width="800" height="800" /></center>
+  <center><em> A confusion matrix displaying the predicted pitch types (x-axis) versus the true
+  pitch types (y-axis)</em></center>
+
+
+
 To use SMOTE oversampling we use the `SMOTE()` function within imbalanced-learn:
 
 ```
@@ -174,5 +179,28 @@ X_resampled, y_resampled = SMOTE(sampling_strategy='not majority', random_state=
 ```
 
 Here, we set the `sampling_strategy` to `not majority`, which will resample all of the classes
-except for the majority class.  In this case, the majority class is the four-seam fastball.  Here is
-the resulting training and testing sets from SMOTE oversampling:
+except for the majority class.  In this case, the majority class is the four-seam fastball.  The
+collections package in Python can be imported to view the count of each pitch type in `y_resampled`:
+
+```
+import collections
+
+collections.Counter(y_resampled)
+
+Counter({0: 311899,
+         1: 311899,
+         2: 311899,
+         3: 311899,
+         4: 311899,
+         5: 311899,
+         6: 311899,
+         7: 311899,
+         8: 311899,
+         9: 311899,
+         10: 311899,
+         11: 311899,
+         12: 311899})
+```
+
+Nice! SMOTE generated synthetic data points so that now each pitch type is equal with each other.
+Now let's see if this improves the performance of the random forest classifier.
