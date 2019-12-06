@@ -7,9 +7,9 @@ category:
 excerpt: Oversampling to balance your dataset
 --- 
 When I tell someone I'm a PhD student in chemical engineering, most of the time they have the
-impression that I'm studying chemical plant processes and such in great detail.  As a result, they are
+impression that I spend my days taking classes and studying topics like chemical plant processes.  As a result, they are
 usually surprised to hear that the majority of my day-to-day job consists of writing Python code.
-They are usually even more confused whenever I say that I aspire to be a data scientist after
+They are often even more confused whenever I say that I aspire to be a data scientist after
 graduating.
 
 With my formal education in math and statistics only coming from my engineering background, this means
@@ -34,6 +34,8 @@ all the pitches for a portion of the MLB Statcast dataset.  To query the data, w
 [Pybaseball](https://github.com/jldbc/pybaseball) package.  We query data from September 20, 2019 to
 October 6, 2019 with the following command:
 ```
+from pybaseball import statcast
+
 start = '2019-09-20'
 end = '2019-10-06'
 data = statcast(start, end)
@@ -170,7 +172,7 @@ We observe that the random forest model does
 a good job at predicting the pitch types that have many data points: changeups, curveballs,
 four-seam fastballs, and sliders.  
 We can also take a look at the precision and recall for this model.  
-Recall and precision are usually a better metric for imbalanced data and classification problems in general, as accuracy can usually lead to misleading results.
+Recall and precision are usually better metrics for imbalanced data and classification problems in general, as accuracy can usually lead to misleading results.
 Recall is the defined as the number of true positives divded by the number of true positives and number of false negatives, which represents the ratio that true positives are correctly identified. 
 Precision is defined as the number of true positives divided by the number of true positives and false positives, which represents the ratio that positive predictions are actually correct. 
 The F1 score is essentially a weighted mean between recall and precision.  
@@ -304,5 +306,8 @@ Overall, imbalanced classes is something to be mindful of when working on classi
 In addition to SMOTE, there are a variety of oversampling techniques contained within this package.  Though I didn't cover it, there are
 also numerous undersampling techniques as well.  One other disclaimer I want to make is that I still consider myself to be a beginner when
 it comes to data science and machine learning.  And as a result, there may have been design choices I made in this model that are incorrect
-or is not considered a best practice.  If you happen to catch anything like this, please feel free to reach out to me and let me know.
+or was not the best implementation.  If you happen to catch anything like this, please feel free to reach out to me and let me know.
 Thanks!
+
+** At the time of this post, I am still working on cleaning up the Jupyter notebook used to build and run this model.  Once I do so, I will
+publish the code online.
