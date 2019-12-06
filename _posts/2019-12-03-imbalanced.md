@@ -165,11 +165,16 @@ rf.fit(X_train, y_train)
 rf_predictions = rf.predict(X_test)
 ```
 
-The results can be seen in the confusion matrix below.  We observe that the random forest model does
+The results can be seen in the confusion matrix below.  
+We observe that the random forest model does
 a good job at predicting the pitch types that have many data points: changeups, curveballs,
-four-seam fastballs, and sliders.  We can also take a look at the precision and recall for this model.  To do
-so, we will import `metrics` from scikit-learn.  As expected however, the model is not effective at predicting the
-minority pitch types. 
+four-seam fastballs, and sliders.  
+We can also take a look at the precision and recall for this model.  
+Recall and precision are usually a better metric for imbalanced data and classification problems in general, as accuracy can usually lead to misleading results.
+Recall is the defined as the number of true positives divded by the number of true positives and number of false negatives, which represents the ratio that true positives are correctly identified. 
+Precision is defined as the number of true positives divided by the number of true positives and false positives, which represents the ratio that positive predictions are actually correct. 
+The F1 score is essentially a weighted mean between recall and precision.  
+To do calculate these metrics, we will import `metrics` from scikit-learn.
 
   <center><img style="margin: 0px 25px 20px 0px;" src="/images/blog/dec4/non_smote_confusion.png" width="800" height="800" /></center>
   <center><em> A confusion matrix of the Random Forest Classifier results with imbalanced data </em></center><br/>
@@ -198,6 +203,14 @@ print(metrics.classification_report(y_update, rf_update, target_names=sorted(set
    macro avg       0.60      0.56      0.58    459114
 weighted avg       0.89      0.89      0.89    459114
 ```
+
+The model does a good job of predicting changeups, curveballs, four-seam fastballs, and sliders as indicated by their recall and precision
+scores.  High recall means that the model is able to correctly identify a large proportion of actual positives for these pitches, while high
+precision indicates that a high proportion of the predicted pitch types were actually correct.  Also identified by the confusion matrix,
+there are pitchtypes such as cutters, two-seam fastballs, knucklecurves, and sinkers that the model does a decent job of predicting.  The
+precision and recall scores for these pitches are between 0.6 and 0.9.  However, there are a number of pitches that have precision and
+recall scores of zero: forkballs, knuckleballs, pitchouts, pitchouts, and screwballs.  These were pitches with little data, so hopefully
+SMOTE can imrpove the predictions.
 
 Now let's use SMOTE in imbalanced-learn to see if we can improve the performance of our model through
 oversampling.  To use SMOTE oversampling we use the `SMOTE()` function within imbalanced-learn:
@@ -280,3 +293,16 @@ print(metrics.classification_report(y_update, rf_update, target_names=sorted(set
    macro avg       0.74      0.66      0.67    459114
 weighted avg       0.89      0.89      0.89    459114
 ```
+
+For the pitches that were already predicted well, SMOTE doesn't appear to have much of an effect.  This is expected, as there was already a
+sufficient amount of data for these pitch types.  However, a decent amount of improvement is observed for the pitches that had zero recall
+and precision.  For example, forkballs now have a precision of 0.31 and a recall of 0.16.  While these scores are still not good, they are
+still quite an improvement.  Most likely, further improvement of the model will come from additional feature engineering, model exploration,
+hyperparameter tuning and such.  
+
+Overall, imbalanced classes is something to be mindful of when working on classification problems.  Oversampling and the use of imbalanced-learn can help improve the performance of imbalanced clases.
+In addition to SMOTE, there are a variety of oversampling techniques contained within this package.  Though I didn't cover it, there are
+also numerous undersampling techniques as well.  One other disclaimer I want to make is that I still consider myself to be a beginner when
+it comes to data science and machine learning.  And as a result, there may have been design choices I made in this model that are incorrect
+or is not considered a best practice.  If you happen to catch anything like this, please feel free to reach out to me and let me know.
+Thanks!
