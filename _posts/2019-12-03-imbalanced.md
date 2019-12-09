@@ -7,13 +7,13 @@ category:
 excerpt: Oversampling to balance your dataset
 --- 
 When I tell someone I'm a PhD student in chemical engineering, most of the time they have the
-impression that I spend my days taking classes and studying topics like chemical plant processes.  As a result, they are
-usually surprised to hear that the majority of my day-to-day job consists of writing Python code.
+impression that I spend my days taking classes and studying topics like chemical plant processes.  They are then
+usually surprised to hear that the majority of my day-to-day job consists of Python programming.
 They are often even more confused whenever I say that I aspire to be a data scientist after
 graduating.
 
 With my formal education in math and statistics only coming from my engineering background, this means
-that there are many data science and machine learning concepts that I need to learn on my own.
+that there are data science and machine learning concepts that I need to learn on my own.
 Personally, it's easier for me to learn new concepts while working on projects rather than trying to
 learn from a textbook.  Recently I've been working on a project to predict baseball pitches from MLB
 Statcast data.  Sports have always been an interest of mine, and I've been looking for a data science
@@ -26,8 +26,9 @@ that is able to collect 30+ pieces of data for a single pitch in a game.  With 3
 
 Predicting baseball pitch types is a multi-class classification problem.  Based on the various columns
 in the data set, we need to be able to predict the class, or type that the pitch belongs to.  In the
-future, I will go over more details of the data, machine learning models, etc.  Though today, I'm
-going to just be focusing on the issue of baseball pitches being imbalanced.  There are many types of
+future, I will go over more details of the data, machine learning models, etc.  In this
+post however, I'm
+going to just be focusing on imbalanced nature of baseball pitch types.  There are many types of
 pitches in baseball: four-seam fastballs, two-seam fastballs, curveballs, sliders, etc.  If you can
 imagine, these pitches are thrown at different rates.  To prove this, we can take a look at a count of
 all the pitches for a portion of the MLB Statcast dataset.  To query the data, we are using the
@@ -45,10 +46,12 @@ By running `np.shape(data)` we see that our dataset consists of 45,643 data poin
 columns.  Not bad for two weeks worth of data.  To get the types of pitches in the dataset, we execute
 the following line of code:
 ```
+pitch_types = list(data.pitch_type.values)
+
 set(pitch_types)
 {'CH', 'CU', 'EP', 'FC', 'FF', 'FS', 'FT', 'KC', 'SI', 'SL'}
 ```
-There are 10 pitch types in total.  Below are the descriptions for each pitch:
+Working with various queries of MLB Stacast data, I have found 14 pitch types in total.  Below are the descriptions for each pitch:
 
 - `CH`: changeup
 - `CU`: curveball
@@ -88,7 +91,7 @@ are considered to be the bread and butter pitch for the majority of pitchers.  T
 is followed by the slider, changeup, and curveball, which are breaking balls.  Pitchers usually have
 some combination of these three pitches, but they are thrown less often than the four-seam fastball.
 One pitch that is thrown very infrequently is the eephus, which is characterized by a high trajectory
-and low velocity.  This is a pitch we may consider dropping from the data set due to its infrequency.
+and low velocity.
 
 This brings us to an inherent problem with this dataset: imbalance.  We have a large amount for
 four-seam fastballs, but not alot of data for pitches like sinkers and splitters.  As a result, we may
@@ -158,6 +161,13 @@ Now we build the random forest in scikit-learn:
 
 ```
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+
+y = data['pitch_type']
+X = data.loc[:, data.columns != 'pitch_type']
+
+# Now use `train_test_split` in scikit-learn to split the data into training and testing data
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.35, random_state=0)
 
 rf = RandomForestClassifier(n_estimators=100,
                            oob_score=True,
@@ -175,7 +185,7 @@ We can also take a look at the precision and recall for this model.
 Recall and precision are usually better metrics for imbalanced data and classification problems in general, as accuracy can usually lead to misleading results.
 Recall is the defined as the number of true positives divded by the number of true positives and number of false negatives, which represents the ratio that true positives are correctly identified. 
 Precision is defined as the number of true positives divided by the number of true positives and false positives, which represents the ratio that positive predictions are actually correct. 
-The F1 score is essentially a weighted mean between recall and precision.  
+The f1-score is essentially a weighted mean between recall and precision.  
 To do calculate these metrics, we will import `metrics` from scikit-learn.
 
   <center><img style="margin: 0px 25px 20px 0px;" src="/images/blog/dec4/non_smote_confusion.png" width="800" height="800" /></center>
@@ -212,7 +222,7 @@ precision indicates that a high proportion of the predicted pitch types were act
 there are pitchtypes such as cutters, two-seam fastballs, knucklecurves, and sinkers that the model does a decent job of predicting.  The
 precision and recall scores for these pitches are between 0.6 and 0.9.  However, there are a number of pitches that have precision and
 recall scores of zero: forkballs, knuckleballs, pitchouts, pitchouts, and screwballs.  These were pitches with little data, so hopefully
-SMOTE can imrpove the predictions.
+SMOTE can improve the predictions.
 
 Now let's use SMOTE in imbalanced-learn to see if we can improve the performance of our model through
 oversampling.  To use SMOTE oversampling we use the `SMOTE()` function within imbalanced-learn:
@@ -266,9 +276,9 @@ rf_predictions = rf.predict(X_test)
   <center><em> A confusion matrix of the Random Forest Classifier results with SMOTE</em></center><br/>
 
 From the confusion matrix, we see mixed results.  Pitches that already had a sufficient number of data points
-like cutters, knucklecurves, changeups, and four-seam fastballs are predicted with roughly the same accuracy.  However
+like cutters, knucklecurves, changeups, and four-seam fastballs are predicted with roughly the same accuracy.  More importantly,
 pitches like sliders, two-seam fastballs, curveballs, and sinkers are predicted with much better accuracy.
-There are still pitch types that aren't being predicted well at all, such as pitchouts and screwballs,
+However there are still pitch types that aren't being predicted well at all, such as pitchouts and screwballs,
 which is likely due to the small amount of data for these pitch types to begin with.  In fact, I originally didn't come across pitchouts when analyzing a smaller size of data, so this might be an inconsistent pitch type.  
 Similar to what I did with the imbalanced data, I generated a list of precision, recall, and f1-scores.
 
@@ -301,6 +311,8 @@ sufficient amount of data for these pitch types.  However, a decent amount of im
 and precision.  For example, forkballs now have a precision of 0.31 and a recall of 0.16.  While these scores are still not good, they are
 still quite an improvement.  Most likely, further improvement of the model will come from additional feature engineering, model exploration,
 hyperparameter tuning and such.  
+
+## Conclusions
 
 Overall, imbalanced classes is something to be mindful of when working on classification problems.  Oversampling and the use of imbalanced-learn can help improve the performance of imbalanced clases.
 In addition to SMOTE, there are a variety of oversampling techniques contained within this package.  Though I didn't cover it, there are
