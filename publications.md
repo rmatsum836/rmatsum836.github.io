@@ -7,6 +7,11 @@ description: ""
 <div
 style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padding-bottom:20px;padding-left:15px;padding-right:15px">
 
+   <div
+   style="font-weight:bolder;">
+   <h4>Journal Publications</h4>
+   </div>
+
    <div class="entry-summary">
     <p> Thompson, M. W.; Gilmer, J. B.; Matsumoto, R. A.; Quach, C. D.; Shamaprasad, P;
     Yang, A. H.; Iacovella, C. R.; McCabe, C; Cummings, P. T.;
@@ -25,10 +30,6 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
     </a> J. Phys. Chem. C. 2020.</p>
     </div>
 
-   <div
-   style="font-weight:bolder;">
-   <h4>Journal Publications</h4>
-   </div>
    <div class="entry-summary">
     <p> Matsumoto, R. A.; Thompson, M. W.;
     Cummings, P. T.; <a class="talk-title"
