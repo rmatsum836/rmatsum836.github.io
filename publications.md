@@ -11,6 +11,25 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    style="font-weight:bolder;">
    <h4>Journal Publications</h4>
    </div>
+
+   <div class="entry-summary">
+    <p> Thompson, M. W.; Gilmer, J. B.; Matsumoto, R. A.; Quach, C. D.; Shamaprasad, P;
+    Yang, A. H.; Iacovella, C. R.; McCabe, C; Cummings, P. T.;
+    <a class="talk-title" href="https://doi.org/10.1080/00268976.2020.1742938"
+        target="_blank">Towards Molecular Simulations that are Transparent, Reproducible,
+    Usable by Others, and Extensible (TRUE)
+    </a> Mol. Phys. 2020.</p>
+    </div>
+
+   <div class="entry-summary">
+    <p> Popov, I.; Sacci, R. L.; Sanders, N. C.; Matsumoto, R. A; Thompson, M. W.;
+    Osti, N. C.; Kobayashi, T.; Tyagi, M. S.; Mamontov, E.; Pruski, M.; Cummings, P. T.; 
+    Sokolov, A. P.; <a class="talk-title" href="https://doi.org/10.1021/acs.jpcc.9b10807"
+        target="_blank">Critical Role of Anion-Solvent Interactions for Dynamics of 
+    Solvent-in-Salt Solutions
+    </a> J. Phys. Chem. C. 2020.</p>
+    </div>
+
    <div class="entry-summary">
     <p> Matsumoto, R. A.; Thompson, M. W.;
     Cummings, P. T.; <a class="talk-title"
