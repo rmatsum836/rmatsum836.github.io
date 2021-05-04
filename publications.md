@@ -13,6 +13,33 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    </div>
 
    <div class="entry-summary">
+    <p> DeFever, R. S.; Matsumoto, R. A.; Dowling, A. W.; Cummings, P. T.; Maginn, E. J.;
+    <a class="talk-title" href="https://onlinelibrary.wiley.com/doi/10.1002/jcc.26544?af=R"
+        target="_blank">MoSDeF Cassandra: A complete Python interface for the
+        Cassandra Monte Carlo software"
+    </a> J. Comp. Chem. 2021.</p>
+    </div>
+
+   <div class="entry-summary">
+    <p> Cummings, P. T.; McCabe, C.; Iacovella, C. R.; Ledeczi, A.; Jankowski,
+    E.; Jayaraman, A.; Palmer, J. C.; Maginn, E. J.; Glotzer, S. C.; Anderson,
+    J. A.; Siepmann, J. I.; Potoff, J.; Matsumoto, R. A.; Gilmer, J. B.;
+    DeFever, R. S.; Singh, R.; Crawford, B.;
+    <a class="talk-title" href="https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.17206"
+        target="_blank">Open-source molecular modeling software in chemical
+        engineering focusing on the Molecular Simulation Design Framework"
+    </a> AIChE J. 2021.</p>
+    </div>
+
+   <div class="entry-summary">
+    <p> Martins, M. L.; Sacci, R. L.; Sanders, N. C.; Tyler, J. L.; Matsumoto, R.; Popov, I.; Guo, W.; Dai, S.; Cummings, P. T.; Sokolov, A. P.; Mamontov, E.;
+    <a class="talk-title" href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.0c05311"
+        target="_blank">Addition of Chloroform in a Solvent-in-Salt Electrolyte:
+        Outcomes in the Microscopic Dynamics in Bulk and Confinement
+    </a> J. Phys. Chem. C. 2020.</p>
+    </div>
+
+   <div class="entry-summary">
     <p> Thompson, M. W.; Gilmer, J. B.; Matsumoto, R. A.; Quach, C. D.; Shamaprasad, P;
     Yang, A. H.; Iacovella, C. R.; McCabe, C; Cummings, P. T.;
     <a class="talk-title" href="https://doi.org/10.1080/00268976.2020.1742938"

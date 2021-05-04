@@ -13,6 +13,23 @@ style="max-width:1000px;margin-left:auto;margin-right:auto;padding-top:40px;padd
    style="font-weight:bolder;">
    <h4>Conference Presentations</h4>
    </div>
+   <!-- AIChe Annual Conference, 2020 -->
+   <div class="entry-summary">
+    <p><a class="talk-title"
+    href="https://www.aiche.org/academy/conferences/aiche-annual-meeting/2020/proceeding/paper/346br-investigating-correlated-dynamics-aqueous-solutions-through-van-hove-functions-insights"
+    target="_blank">AIChE Annual Conference, Virtual, November
+    2020</a>:  Investigating the Correlated Dynamics of Aqueous Solutions
+    through Van Hove Functions: Insights from Molecular Simulation.</p>
+    </div>
+
+   <!-- AIChe Annual Conference, 2020 -->
+   <div class="entry-summary">
+    <p><a class="talk-title"
+    href="https://www.aiche.org/academy/conferences/aiche-annual-meeting/2020/proceeding/paper/346bp-molecular-simulation-studies-solvent-salt-electrolytes-energy-storage-applications"
+    target="_blank">AIChE Annual Conference, Virtual, November
+    2020</a>:  Molecular Simulation Studies of Solvent-in-Salt Electrolytes for
+    Energy Storage Applications.</p>
+    </div>
   
    <!-- AIChe Annual Conference, 2019 -->
    <div class="entry-summary">
